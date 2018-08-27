@@ -66,4 +66,31 @@ class Calculator {
 
 }
 
+/*
+//universal amount of data:
+//position
+int number;
+double[] data;
+
+//number loop without error+sigh-loop
+for (number=0;number<=4;number=number+2){
+  data[number] = Double.parseDouble(expression[number]);
+
+
+
+
+result= number&expression' operation;}
+
+
+int i;
+for (i=1;i<2;i++){
+ sign-expression's check};
+
+int number;
+for (number=0;number+2;number++){
+result= number&expression' operation;}
+
+
+ */
+
 
