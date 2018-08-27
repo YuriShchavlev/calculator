@@ -9,61 +9,45 @@ class Calculator {
 
     String calculate(String[] expression) {
 
-        System.out.println(expression[0]);
-        System.out.println(expression[1]);
-        System.out.println(expression[2]);
-
-        double a = Double.parseDouble(expression[0]);
-        double b = Double.parseDouble(expression[2]);
 
         double result = 0;
         double result2 = 0;
+        double number = 0; //0, 2, 4, if any
 
-        switch (expression[1]) {
-            case "+":
-                result = a + b;
-                break;
-            case "-":
-                result = a - b;
-                break;
-            case "*":
-                result = a * b;
-                break;
-            case "/":
-                result = a / b;
-                break;
-            default:
-                return "ERROR";
-        }
-
-        //   return String.valueOf(result);
-        if (expression.length < 3) {
-
-
-            return String.valueOf(result);}
-            else {
+            double a = Double.parseDouble(expression[0]);
+            double b = Double.parseDouble(expression[2]);
             double c = Double.parseDouble(expression[4]);
-            switch (expression[3]) {
+
+            switch (expression[1]) {
                 case "+":
-                    result2 = result + c;
+                    if (expression[3]=="*"){
+                        result=b*c+a;
+                    }
+                    else if (expression[3]=="/"){
+                        result = (b/c)+a;
+                    }
+                    else if(expression[3]=="-"){
+                        result=a+b-c;
+                    }
+                    else{
+                        result=a+b+c;
+                    }
                     break;
                 case "-":
-                    result2 = result - c;
+                    result = a - b;
                     break;
                 case "*":
-                    result2 = result * c;
+                    result = a * b;
                     break;
                 case "/":
-                    result2 = result / c;
+                    result = a / b;
                     break;
-                default:
-                    return "ERROR";
             }
 
-            return String.valueOf(result2);
-        }
-    }
+        return String.valueOf(result);
 
+    }
 }
+
 
 
